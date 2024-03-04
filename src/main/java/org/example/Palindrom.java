@@ -1,18 +1,16 @@
 package org.example;
 
 public class Palindrom {
-    protected static void palindrom(String origin){
-        origin = origin.toLowerCase().replaceAll(" ", "");
-        String result ="";
+    protected static void palindrom(String origin) {
 
-        char[] arrChar = origin.toCharArray();
+        origin = origin.replaceAll(" ", "");
 
-        for (int i=arrChar.length-1; i>=0; i--){
-            result = result + arrChar[i];
-        }
-        if (origin.equals(result)){
+        StringBuilder revert = new StringBuilder(origin).reverse();
+        String result = revert.toString().replaceAll(" ", "");
+
+        if (origin.equalsIgnoreCase(result)) {
             System.out.println("true");
-        }else {
+        } else {
             System.out.println("false");
         }
     }

@@ -7,15 +7,16 @@ public class Coordinates {
 
         for (int i = 0; i < arr.length; i++) {
 
-            if (arr[i][arr[i].length-1] >= numberToSerch && arr[i][0] <= numberToSerch) {
+            if (arr[i][arr[i].length - 1] >= numberToSerch && arr[i][0] <= numberToSerch) {
 
                 for (int j = 0; j < arr[i].length; j++) {
 
                     if (arr[i][j] == numberToSerch) {
                         System.out.println(i + "," + j);
+                        System.exit(0);
                     }
                 }
-            } break;
+            }
         }
     }
 }
